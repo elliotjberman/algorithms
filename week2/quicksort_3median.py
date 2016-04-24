@@ -1,4 +1,4 @@
-import statistics
+import math
 import random
 from random import randint
 
@@ -10,7 +10,7 @@ def swap(array, a, b):
 
 def find_median(array, first, last):
 	length = len(array[first:last])
-	middle = round(length / 2) - 1
+	middle = math.ceil(length / 2) - 1
 	middle += first
 
 	choices = []
@@ -58,7 +58,7 @@ def quicksort(array, first, last):
 
 #Non-sorted integers
 content = []
-with open('100.txt') as f:
+with open('integers.txt') as f:
 	for line in f:
 		content.append(int(line))
 
