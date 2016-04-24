@@ -20,17 +20,19 @@ def find_median(array, first, last):
 
 	print(array[first:last])
 	print(choices)
+
 	choices.sort()
 	median = choices[1]
+
 	print(median)
 	print()
 
 	if median == array[first]:
 		return first
-	elif median == array[middle]:
-		return middle
-	else:
+	elif median == array[last-1]:
 		return last-1
+	else:
+		return middle
 
 def quicksort(array, first, last):
 	if last-first > 1:
@@ -48,7 +50,7 @@ def quicksort(array, first, last):
 			j+=1
 		swap(array, i-1, first)
 
-		if i < last+1:
+		if i < last:
 			quicksort(array, first, i-1)
 			quicksort(array, i, last)
 
