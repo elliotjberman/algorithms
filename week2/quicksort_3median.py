@@ -18,14 +18,8 @@ def find_median(array, first, last):
 	choices.append(array[middle])
 	choices.append(array[last-1])
 
-	print(array[first:last])
-	print(choices)
-
 	choices.sort()
 	median = choices[1]
-
-	print(median)
-	print()
 
 	if median == array[first]:
 		return first

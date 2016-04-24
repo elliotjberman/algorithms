@@ -1,11 +1,11 @@
-def merge_sort(array):
+def mergesort(array):
 	if len(array) > 1:
 		middle  = len(array)//2
 		a = array[:middle]
 		b = array[middle:]
 
-		merge_sort(a)
-		merge_sort(b)
+		mergesort(a)
+		mergesort(b)
 
 		i = 0
 		j = 0
@@ -27,6 +27,6 @@ def merge_sort(array):
 			j = j+1
 			k = k+1
 	return array
-	
+
 input_array = [5, 4, 1, 8, 7, 2, 6, 3]
-print(merge_sort(input_array))
+print(mergesort(input_array))
