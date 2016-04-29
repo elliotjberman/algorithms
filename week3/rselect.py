@@ -30,3 +30,8 @@ def random_select(array, order_statistic, first, last):
 			return array[i-1]
 	else:
 		return array[first]
+
+
+stanford_array = [8, 3, 2, 5, 1, 4, 7, 6]
+
+print(random_select(stanford_array, 2, 0, len(stanford_array)))
