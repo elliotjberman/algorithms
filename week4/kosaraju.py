@@ -21,6 +21,7 @@ from write_adjacency_list import write_adjacency_list
 
 adjacency_list = write_adjacency_list('SCC.txt')
 
+
 def generate_reverse_list(graph):
 	reverse_list = {}
 	for node in graph:
@@ -39,6 +40,7 @@ def kosaraju(graph):
 	for node in reverse_list:
 		reverse_count(reverse_list, node, order_list)
 	finishing_times = order_list
+	print(finishing_times)
 	final_score = count_components(finishing_times, graph)
 	return final_score
 

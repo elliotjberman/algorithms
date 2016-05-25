@@ -1,3 +1,5 @@
+import time
+
 def write_adjacency_list(filepath):
 	adjacency_list = {}
 	with open(filepath) as f:
@@ -10,5 +12,6 @@ def write_adjacency_list(filepath):
 			if second_character not in adjacency_list:
 				adjacency_list[second_character] = {'explored': False, 'edges': []}
 			adjacency_list[first_character]['edges'].append( second_character )
+	print(time.clock())
 	print("finished reading file")
 	return adjacency_list

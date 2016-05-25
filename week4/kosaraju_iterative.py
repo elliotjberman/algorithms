@@ -18,6 +18,7 @@
 
 from write_adjacency_list import write_adjacency_list
 import collections
+import time
 
 adjacency_list = write_adjacency_list('SCC.txt')
 
@@ -31,14 +32,17 @@ def generate_reverse_list(graph):
 				reverse_list[neighbor] = {'explored': False, 'edges': [], 'added_to_list': False}
 			if node not in reverse_list[neighbor]['edges']:
 				reverse_list[neighbor]['edges'].append(node)
+	print(time.clock())
 	print("finished reversing list")
 	return reverse_list
 
 def kosaraju(graph):
 	reverse_list = generate_reverse_list(graph)
 	finishing_times = reverse_count(reverse_list)
+	print(time.clock())
 	print("finished first DFS")
 	final_score = count_components(finishing_times, graph)
+	print(time.clock())
 	return final_score
 
 
