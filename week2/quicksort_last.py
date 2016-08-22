@@ -35,7 +35,7 @@ already_sorted = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 #100,000 non-sorted integers
 content = []
-with open('ShouldBe615.txt') as f:
+with open('integers.txt') as f:
 	for line in f:
 		content.append(int(line))
 

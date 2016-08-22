@@ -2,7 +2,7 @@ global count
 count = 0
 
 content = []
-with open('IntegerArray.txt') as f:
+with open('new_integer_array.txt') as f:
 	for line in f:
 		content.append(int(line))
 
