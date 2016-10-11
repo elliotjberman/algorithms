@@ -1,5 +1,4 @@
 from union_find import UnionFind
-import time
 import copy
 
 numbers = set()
